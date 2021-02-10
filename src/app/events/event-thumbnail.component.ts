@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
     `
     .pad-left { margin-left: .5rem;}
     .well div {color: #bbb;}
+    .thumbnail {min-height: 21rem}
     `
   ]
 })
