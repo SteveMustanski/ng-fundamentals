@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from './auth.service';
+import { Router } from "@angular/router";
 
 @Component({
   templateUrl: './login.component.html'
@@ -7,12 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   userName:string
   password:string
-  constructor() { }
+  constructor(private authService:AuthService, private router:Router) { }
 
   login(formValues) {
-    console.log(formValues)
+    this.authService.loginUser(formValues.userName, formValues.password)
+    this.router.navigate(['events'])
   }
 
+  cancel() {
+    this.router.navigate(['events'])
+  }
 
   ngOnInit() { }
 }
