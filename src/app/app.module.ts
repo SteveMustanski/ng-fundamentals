@@ -18,6 +18,7 @@ import { NavBarComponent } from "./nav/navbar.component";
 import { ToastrService } from './common/toastr.service';
 import { appRoutes } from "./routes";
 import { Error404Component } from "./errors/404.component";
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { Error404Component } from "./errors/404.component";
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    UserModule
   ],
   providers: [
     EventService,
