@@ -1,15 +1,16 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ISession } from "../shared/index";
+import { Component, Input, OnInit } from '@angular/core';
+import { ISession } from '../shared';
 
 @Component({
   selector: 'session-list',
-  templateUrl: 'session-list.component.html'
+  templateUrl: './session-list.component.html',
+  styleUrls: ['./session-list.component.css']
 })
-
-export class SessionList implements OnInit {
+export class SessionListComponent implements OnInit {
   @Input() sessions:ISession[]
-
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit(): void {
+  }
+
 }
