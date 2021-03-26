@@ -13,6 +13,8 @@ import {
   CreateSessionComponent
 } from './events/index';
 
+import { DurationPipe } from './events/shared/duration.pipe';
+
 
 import { EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from "./nav/navbar.component";
@@ -31,6 +33,7 @@ import { SessionListComponent } from "./events/event-details/session-list.compon
     EventsListComponent,
     EventThumbnailComponent,
     CollapsibleWelllComponent,
+    DurationPipe,
     NavBarComponent,
     EventDetailsComponent,
     CreateEventComponent,
