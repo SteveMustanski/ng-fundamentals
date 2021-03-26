@@ -11,6 +11,8 @@ import { ISession } from "../shared/index";
 
 export class CreateSessionComponent implements OnInit {
   @Output() saveNewSession = new EventEmitter()
+  @Output() cancelAddSession = new EventEmitter()
+
   newSessionForm: FormGroup
   name: FormControl
   presenter: FormControl
@@ -61,5 +63,9 @@ export class CreateSessionComponent implements OnInit {
       voters: []
     }
     this.saveNewSession.emit(session);
+  }
+
+  cancel() {
+    this.cancelAddSession.emit();
   }
 }
