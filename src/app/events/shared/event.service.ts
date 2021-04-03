@@ -38,7 +38,7 @@ export class EventService {
     EVENTS.forEach(event => {
       let matchingSessions = event.sessions.filter(session => session.name.toLocaleLowerCase().indexOf(term) > -1)
       matchingSessions = matchingSessions.map((session:any) => {
-        session.evenId = event.id;
+        session.eventId = event.id;
         return session;
       })
       results = results.concat(matchingSessions);

@@ -18,7 +18,7 @@ import { DurationPipe } from './events/shared/duration.pipe';
 
 import { EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from "./nav/navbar.component";
-import { JQ_TOKEN, TOASTR_TOKEN, Toastr, CollapsibleWelllComponent } from "./common/index";
+import { JQ_TOKEN, TOASTR_TOKEN, Toastr, CollapsibleWelllComponent, SimpleModalComponent } from "./common/index";
 import { appRoutes } from "./routes";
 import { Error404Component } from "./errors/404.component";
 import { UserModule } from './user/user.module';
@@ -35,6 +35,7 @@ let jQuery = window['$'];
     EventsListComponent,
     EventThumbnailComponent,
     CollapsibleWelllComponent,
+    SimpleModalComponent,
     DurationPipe,
     NavBarComponent,
     EventDetailsComponent,
@@ -55,9 +56,8 @@ let jQuery = window['$'];
     EventRouteActivator,
     EventListResolver,
     AuthService,
-    {
-      provide: TOASTR_TOKEN, useValue: toastr
-    },
+    {provide: TOASTR_TOKEN, useValue: toastr},
+    {provide: JQ_TOKEN, useValue: jQuery},
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState
