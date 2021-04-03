@@ -18,8 +18,7 @@ import { DurationPipe } from './events/shared/duration.pipe';
 
 import { EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from "./nav/navbar.component";
-import { TOASTR_TOKEN, Toastr } from './common/toastr.service';
-import { CollapsibleWelllComponent } from './common/collapsible-well.component';
+import { JQ_TOKEN, TOASTR_TOKEN, Toastr, CollapsibleWelllComponent } from "./common/index";
 import { appRoutes } from "./routes";
 import { Error404Component } from "./errors/404.component";
 import { UserModule } from './user/user.module';
@@ -27,7 +26,8 @@ import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SessionListComponent } from "./events/event-details/session-list.component";
 
-declare let toastr : Toastr
+let toastr:Toastr = window['toastr'];
+let jQuery = window['$'];
 
 @NgModule({
   declarations: [
