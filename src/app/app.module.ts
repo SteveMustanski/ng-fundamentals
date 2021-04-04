@@ -18,7 +18,7 @@ import { DurationPipe } from './events/shared/duration.pipe';
 
 import { EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from "./nav/navbar.component";
-import { JQ_TOKEN, TOASTR_TOKEN, Toastr, CollapsibleWelllComponent, SimpleModalComponent } from "./common/index";
+import { JQ_TOKEN, TOASTR_TOKEN, Toastr, CollapsibleWelllComponent, SimpleModalComponent, ModalTriggerDirective } from "./common/index";
 import { appRoutes } from "./routes";
 import { Error404Component } from "./errors/404.component";
 import { UserModule } from './user/user.module';
@@ -31,13 +31,14 @@ let jQuery = window['$'];
 
 @NgModule({
   declarations: [
+    NavBarComponent,
     EventsAppComponent,
     EventsListComponent,
     EventThumbnailComponent,
     CollapsibleWelllComponent,
     SimpleModalComponent,
+    ModalTriggerDirective,
     DurationPipe,
-    NavBarComponent,
     EventDetailsComponent,
     CreateEventComponent,
     Error404Component,
