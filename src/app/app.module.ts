@@ -10,7 +10,8 @@ import {
   EventRouteActivator,
   EventDetailsComponent,
   CreateEventComponent,
-  CreateSessionComponent
+  CreateSessionComponent,
+  UpvoteComponent
 } from './events/index';
 
 import { DurationPipe } from './events/shared/duration.pipe';
@@ -43,6 +44,7 @@ let jQuery = window['$'];
     CreateEventComponent,
     Error404Component,
     CreateSessionComponent,
+    UpvoteComponent,
     SessionListComponent,
   ],
   imports: [
