@@ -11,7 +11,8 @@ import {
   EventDetailsComponent,
   CreateEventComponent,
   CreateSessionComponent,
-  UpvoteComponent
+  UpvoteComponent,
+  VoterService
 } from './events/index';
 
 import { DurationPipe } from './events/shared/duration.pipe';
@@ -59,6 +60,7 @@ let jQuery = window['$'];
     EventRouteActivator,
     EventListResolver,
     AuthService,
+    VoterService,
     {provide: TOASTR_TOKEN, useValue: toastr},
     {provide: JQ_TOKEN, useValue: jQuery},
     {
