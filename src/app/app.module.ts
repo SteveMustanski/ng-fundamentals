@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from "@angular/router";
+import { HttpClientModule } from "@angular/common/http";
 
 import {
   EventThumbnailComponent,
@@ -54,7 +55,8 @@ let jQuery = window['$'];
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
     UserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     EventService,
