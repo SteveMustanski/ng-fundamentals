@@ -8,7 +8,6 @@ import {
   EventsListComponent,
   EventListResolver,
   EventService,
-  EventRouteActivator,
   EventDetailsComponent,
   CreateEventComponent,
   CreateSessionComponent,
@@ -60,7 +59,7 @@ let jQuery = window['$'];
   ],
   providers: [
     EventService,
-    EventRouteActivator,
+    EventListResolver,
     EventListResolver,
     AuthService,
     VoterService,
